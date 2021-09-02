@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     // Reference to our rigid body
     Rigidbody rb;
+    AudioSource audioSource;
     [SerializeField] float mainThrust = 1000.0f;
     [SerializeField] float rotationThrust = 100.0f;
 
@@ -13,6 +14,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
         
     }
 
@@ -30,7 +32,13 @@ public class Movement : MonoBehaviour
             || Input.GetKey(KeyCode.W))
         {
             rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
+            // somente vamos tocar se nao estiver tocando.
+            if (!audioSource.isPlaying) audioSource.Play();
         }
+        else  // se nao estiver sendo pressionado, devemos parar de tocar
+        {
+            audioSource.Stop();
+        } 
     }
 
     void ProcessRotation()
