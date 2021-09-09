@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    // PARAMETERS
+    [SerializeField] float mainThrust = 1000.0f;
+    [SerializeField] float rotationThrust = 100.0f;
+    [SerializeField] AudioClip mainEngine;
+
+    // CACHE
     // Reference to our rigid body
     Rigidbody rb;
     AudioSource audioSource;
-    [SerializeField] float mainThrust = 1000.0f;
-    [SerializeField] float rotationThrust = 100.0f;
+
+    // STATE
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +39,7 @@ public class Movement : MonoBehaviour
         {
             rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
             // somente vamos tocar se nao estiver tocando.
-            if (!audioSource.isPlaying) audioSource.Play();
+            if (!audioSource.isPlaying) audioSource.PlayOneShot(mainEngine);
         }
         else  // se nao estiver sendo pressionado, devemos parar de tocar
         {

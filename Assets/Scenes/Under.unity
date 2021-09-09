@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 29217f1ec2dcbdd4688781407ad129da, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -212,7 +212,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122156265}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 28, z: 0}
+  m_LocalPosition: {x: 0, y: 55, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -394,23 +394,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &655937196 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7497634681839559337, guid: 3a3b1f20517e89f46af1f34161dcc7d7, type: 3}
-  m_PrefabInstance: {fileID: 3606139995340526025}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &655937197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 655937196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75f81454a611d4a4f8364e1d8d5e5a9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2031692265448663658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -421,10 +404,6 @@ PrefabInstance:
     - target: {fileID: 1055960419718397073, guid: eb2d568a5680d4b49982d18841a42ef1, type: 3}
       propertyPath: m_Name
       value: Landing Pad
-      objectReference: {fileID: 0}
-    - target: {fileID: 1055960419718397073, guid: eb2d568a5680d4b49982d18841a42ef1, type: 3}
-      propertyPath: m_TagString
-      value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: 7470251523875474880, guid: eb2d568a5680d4b49982d18841a42ef1, type: 3}
       propertyPath: m_RootOrder
@@ -489,7 +468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2698972074238056704, guid: 75ff7153a0156514a9e4cbf5f56bc5e1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 2698972074238056704, guid: 75ff7153a0156514a9e4cbf5f56bc5e1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -536,9 +515,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 655937197, guid: 3a3b1f20517e89f46af1f34161dcc7d7, type: 3}
+      propertyPath: mainEngine
+      value: 
+      objectReference: {fileID: 8300000, guid: 90cd62477a9b2f8479d03cb80b08f057, type: 3}
     - target: {fileID: 655937203, guid: 3a3b1f20517e89f46af1f34161dcc7d7, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
+      propertyPath: m_audioClip
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7497634681839559337, guid: 3a3b1f20517e89f46af1f34161dcc7d7, type: 3}
       propertyPath: m_Name
@@ -657,10 +640,6 @@ PrefabInstance:
     - target: {fileID: 3174113045111940852, guid: 47c4fa2ada792db43af467821ddcaa26, type: 3}
       propertyPath: m_Name
       value: Launch Pad
-      objectReference: {fileID: 0}
-    - target: {fileID: 3174113045111940852, guid: 47c4fa2ada792db43af467821ddcaa26, type: 3}
-      propertyPath: m_TagString
-      value: Friendly
       objectReference: {fileID: 0}
     - target: {fileID: 3319309720018523251, guid: 47c4fa2ada792db43af467821ddcaa26, type: 3}
       propertyPath: m_RootOrder
