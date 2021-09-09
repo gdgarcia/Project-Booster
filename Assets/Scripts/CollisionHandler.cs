@@ -8,6 +8,10 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] AudioClip success;
     [SerializeField] AudioClip crash;
 
+    [SerializeField] ParticleSystem successParticles;
+    [SerializeField] ParticleSystem crashParticles;
+
+
     AudioSource audioSource;
 
     bool isTransitioning = false;
@@ -69,7 +73,8 @@ public class CollisionHandler : MonoBehaviour
         // Stop all other sound effects linked to the ship
         GetComponent<AudioSource>().Stop();
         audioSource.PlayOneShot(success);
-        // TODO: add particle effect upon success
+        successParticles.Play();
+
         Invoke("LoadNextLevel", levelLoadDelay);
     }
 
@@ -82,6 +87,7 @@ public class CollisionHandler : MonoBehaviour
         // plays crash audio
         audioSource.PlayOneShot(crash);
         // TODO: add particle effect upon crash
+        crashParticles.Play();
         
         Invoke("ReloadLevel", reloadDelay);
     }
